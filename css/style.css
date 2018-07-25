@@ -1,0 +1,522 @@
+/* color 
+orange: f9a602
+yellow: ffcb63
+purple: 7259c2
+black: 1b152e
+white: f9f8fd
+*/
+
+       
+body{
+    font-family: 'Poppins', sans-serif;
+    color: #1b152e;
+}
+p{
+    font-size: 16px;
+    line-height: 1.5em;
+    
+}
+#background{
+    height: auto;
+    position: relative;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+#home .container h1{
+    position: absolute;
+    top: 100%;
+}
+#header-wrapper { 
+    width: 100%; 
+    height: cover; 
+    padding: 0; 
+    
+}
+#letters{
+    z-index: 10;
+    display: inline;
+}
+#header.home #header-wrapper { 
+    padding: .5rem 1rem;
+}
+
+#hero-text-wrapper img{ 
+    float: left; 
+    position: absolute; 
+    margin-left: auto; 
+    margin-right: auto; 
+    z-index: 2;
+    width: 30%;
+    margin-left: 35%;
+    margin-right: 35%;
+    margin-top: 10%;
+}
+
+
+#header { 
+    width: 100%; 
+    height: 85px; 
+    background: #ffcb63; 
+    box-shadow: 0px 1px 0.3px 0px; 
+    position: fixed; 
+    z-index: 10; 
+    top: 0; 
+    transition: height .35s; 
+
+}
+#header nav ul { 
+    margin: 0; 
+    padding: 0; 
+}
+#header nav ul li { 
+    display: inline-block; 
+}
+#header nav ul li a { 
+    font-size: 15px; 
+    text-transform: uppercase; 
+    text-align: center; 
+    letter-spacing: 2px; 
+    margin: 0 15px; 
+    padding: 25px 0; 
+    display: block; 
+    color: #1b152e; 
+}
+#menu{
+    text-align: right;
+    float: right
+}
+#home { 
+    margin-left: 0; 
+    width: 100%; 
+    opacity: 1; 
+    z-index: 1; 
+}
+#home .container { 
+    float: left; 
+    position: relative; 
+    color: #1b152e; 
+    top: 25%; 
+    left: 15%; 
+}
+#home .container h2 { 
+    text-transform: uppercase; 
+    font-weight: 700; 
+}
+#home #background { 
+    background-size: cover; 
+    background-position: center center; 
+    box-shadow: 0px 200px 200px -85px white inset; 
+    margin-top: 6 0px; 
+    width: 100%; 
+    height: 700px; 
+    background-repeat: no-repeat; 
+}
+
+div#nav { 
+    height: 85px; 
+}
+
+#logo { 
+    background-image: url("../images/logo.png"); 
+    background-repeat: no-repeat; 
+    background-size: 100%; 
+    height: 40px;
+    width: 140px;
+    margin: 20px;
+    padding: 15px;
+}
+
+#hero-text-wrapper h1 { 
+    text-align: left; 
+}
+#hero-text-wrapper h2 { 
+    text-transform: uppercase; 
+}
+
+
+
+
+
+
+
+/* Search bar */
+#input{
+    background: #f9f8fd;
+    opacity: 0.7;
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+}
+.input-box{
+    height: 40px;
+    width: 200px;
+}
+.input-label{
+    margin: 10px;
+}
+.display-inline-block{
+    display: inline-block;
+}
+.btn{
+    color: #1b152e;
+    background-color: #ffcb63;
+}
+
+#search-btn{
+    margin: 30px;
+}
+#hide-btn{
+    display: block;
+    background-color: white;
+    font-size: 20px;
+    margin: auto;
+
+}
+#event input{
+    width: 300px;
+}
+#event label{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.card-title{
+    text-transform: none;
+}
+.header{
+    text-align: center;
+    border-bottom: 2px solid grey;
+    margin-bottom: 10px;
+
+}
+
+#accommodation-button{
+    font-weight: bold;
+    font-size: 15px;
+}
+#list .card {
+    display: inline-block;
+}
+
+.img-thumbnail{
+    height: 200px;
+    width: 200px;
+    padding-top: auto;
+}
+.background{
+    height: auto;
+    padding: 10px;
+}
+#treat-category{
+    text-align: center;
+    margin-bottom: 20px;
+    
+}
+#treat-category a{
+    color: #7259c2;
+    background-color: white;
+    font-size: 20px;
+    text-decoration: none;
+    margin: 15px;
+    margin-top: 20px;
+    font-weight: 400px;
+}
+.end{
+    height: 100px;
+}
+
+.row{
+    margin-bottom: 20px;
+}
+#event{
+    height: 200px;
+}
+#filling{
+    margin-bottom: 30px;
+}
+#id{
+    display: inline;
+}
+.fa-dollar-sign {
+    color: #f9a602;
+}
+.fa-shopping-cart{
+    font-size: 12px;
+    margin: 4px;
+    padding: 4px;
+}
+
+.card{
+    margin: 10px;
+    text-align: center;
+    
+}
+#back{
+    float: right;
+    text-align: center;
+    margin-top: 30px;
+    font-weight: bold;
+    color: #1b152e;
+    
+}
+.meal{
+    display: inline-block;
+}
+.price{
+    float: right;
+    display: inline-block;
+}
+.addselect {
+    display: none;
+    color: #f9a602;
+    font-weight: bold;
+}
+.copyright{
+    color: #1b152e;
+    overflow: hidden;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    z-index: 10;
+}
+
+
+.hidden {
+  display : none;
+  text-align: center;
+}
+#event div{
+    color: red;
+    display: inline-block;
+    font-weight: bold;
+    
+}
+
+#final{
+    text-align: center;
+    margin-top: 100px;
+    color: green;
+    font-weight: bold;
+    margin-bottom: 80px;
+}
+
+/* About */
+h1{
+    margin: 100px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #1b152e;
+}
+#about p{
+    display: inline-block;
+    float: left;
+    margin-top: 10%;
+    color: #1b152e;
+}
+#about img{
+    display: inline-block;
+    float: right;
+}
+.parallax-window {
+    min-height: 400px;
+    background: transparent;
+}
+#feedback{
+    
+    color: #f9f8fd;
+}
+#feedback img{
+    height: 170px;
+    margin-top: 150px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+}
+#feedback h2{
+    font-size: 35px;
+    display: block;
+    margin: auto;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.fa-quote-right{
+    height: 150px;
+    display: block;
+    text-align: right;
+
+}
+.fa-quote-right ,
+.fa-quote-left{
+    font-size: 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+#slideshow .item{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
+
+/* contact */
+input{
+    border: 1px solid #7259c2;
+    border-radius: 4px;
+    resize: vertical;
+    padding-left: 10px;
+}
+#contact h1{
+    color: #f9f8fd
+}
+#contact-name,
+#contact-email{
+    width: 23%;
+    margin-right: 2%;
+    opacity: 0.7;
+}
+#contact-question{
+    width: 40%;
+    margin-right: 2%;
+    opacity: 0.7;
+}
+#contact .end{
+    height: 50px;
+}
+
+.social-media{ 
+    text-align: right;
+    color: #1b152e;
+    font-size: 24px;
+    margin-right: 7px;
+}
+#copy{
+    font-size: 24px;
+}
+#footer .end{
+    height: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width : 710px){
+    #hero-text-wrapper img{
+        width: 90%;
+        margin: auto;
+        margin-top: 10%;
+        margin-left: 5%
+
+    }
+    #check-in,
+    #rooms, 
+    #people{
+        margin-top: 30px;
+        display: block;
+    }
+    #order{
+        text-align: center;
+    }
+    #search-result{
+        height: 1100px;
+    }
+    #check-in,
+    #rooms, 
+    #people{
+        margin-top: 30px;
+    }
+    about{
+        margin-left: 6%;
+    }
+    #about img{
+        width: 100%;
+    }
+    #contact-name,
+    #contact-email,
+    #contact-question{
+        width: 90%;
+        margin-top: 20px;
+        display: block;
+        text-align: center;
+        margin-left: 5%
+    }
+    #contact-button{
+        margin-top: 30px;
+        float: right;
+        margin-bottom: 10px;
+        margin-right: 5%;
+
+    }
+    #footer{
+        text-align: center;
+    }
+    
+}
+
+@media only screen and (min-width : 1224px) {
+    #search-result{
+        height: 400px;
+    }
+}
+@media only screen and (max-width : 410px) {
+    
+    #hero-text-wrapper img{
+        width: 100%;
+        margin: auto;
+        margin-top: 50%;
+        margin-left: 5%
+
+    }
+    #order{
+        text-align: center;
+    }
+    #check-in,
+    #rooms, 
+    #people{
+        margin-top: 30px;
+        display: block;
+    }
+    #search-result{
+        height: 1800px;
+    }
+    about{
+        margin-left: 6%;
+    }
+    #about img{
+        width: 100%;
+    }
+    #contact-name,
+    #contact-email,
+    #contact-question{
+        width: 100%;
+        margin-top: 20px;
+        display: block;
+        text-align: center;
+        margin-left: 5%
+    }
+    #contact-button{
+        margin-top: 30px;
+        float: right;
+        margin-bottom: 10px;
+        margin-right: 5%;
+
+    }
+    #footer{
+        text-align: center;
+    }
+    }

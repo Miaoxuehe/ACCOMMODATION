@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Accommodation</title>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,400,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="plugins/aos-master/dist/aos.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+    <script src="plugins/parallax.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+</head>
+
+<body>
+<div id="nav">
+        <div id="loader-container">
+            <div class="spinner"></div>
+        </div>
+        <header id="header" class="home">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <nav id="header-wrapper" class="navbar navbar-expand-lg bg-light  navbar-light justify-content-between">
+                            <a href="#nav" id="logo" class="navbar-brand"></a>
+                            
+                            <div id="menu" class="align-middle collapse navbar-collapse bd-links collapse navbar-collapse navbarNavAltMarkup">
+                                <ul class="navbar-nav ml-auto align-items-center">
+                                    <li class="nav-item active align-middle">
+                                        <a class="nav-link" href="#home">Home
+                                            <span class="sr-only">(current)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="event align-middle" href="#about">About</a>
+                                    </li>
+                                    <li>
+                                        <a class="project align-middle" href="#contact">Contact</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <!-- hero -->
+                    <div id="home">
+                        <div id="top">
+                            <div class="row">
+                                <div id="hero-text-wrapper">
+                                    <img src="images/hero.png" alt="hero"/>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div id="background" style="background-image: url('images/building.jpg')">
+
+                            <form id="search-bar">
+                                <div id="input">
+                                    <div id="check-in" class="display-inline-block">
+                                        <label class="input-label align-middle">Dates </label>
+                                        <input id="date" class="input-box align-middle" type="text" name="daterange" placeholder="please cloose"/>
+                                    </div>
+                                    <!--<div id="rooms" class="display-inline-block">
+                                        <label class="input-label align-middle">Rooms </label>
+                                        <input id="numberOfRooms" class="input-box align-middle" type="number" name="rooms" placeholder="0">
+                                    </div>-->
+                                    <div id="people" class="display-inline-block">
+                                        <label class="input-label align-middle">Adults </label>
+                                        <input id="numberOfPeople" class="input-box align-middle" type="number" name="people" placeholder="1">
+                                    </div>
+                                    <button id="search-btn" type="button" value="unhide" class="align-middle btn btn-outline-warning"> Search </button>
+                                </div>
+                            </form>
+                        </div>
+
+
+                    </div>
+                    <!-- End Hero -->
+
+
+
+                    <!-- Start search result -->
+                    <div id="search-result">
+
+                        <div id="order" class="screen">
+                            <form id="orderform" onsubmit="return false;">
+
+                                <div class="container">
+                                    <div id="treat-category">
+                                        <!-- <div class="row">
+                                            <a type="button" class="category  btn btn-outline-primary">All</a>
+                                            <a type="button" class="category  btn btn-outline-primary">Hotel</a>
+                                            <a class="category  btn btn-outline-primary">Hostel</a>
+                                            <a class="category  btn btn-outline-primary">Motel</a>
+                                            <a class="category  btn btn-outline-primary">House</a>
+                                        </div> -->
+                                    </div>
+                                    <div id="list">
+
+                                    </div>
+                                    <div class="end"></div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="container border">
+                        </div>
+
+
+
+                        <!-- Personal Details Modal -->
+                        <div class="modal fade" id="details" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h3 class="modal-title" id="exampleModalLabel">Enter Your Details</h3>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <form name="eventsForm" onSubmit="return validateForm(this);" method="post">
+                                        <div class="modal-body">
+                                            <div id="event">
+                                                <label>First Name</label>
+                                                <br>
+                                                <input type="text" id="firstName" />
+                                                <div id="firstName-error" class="hidden">First Name Is Invalid</div>
+                                                <br>
+
+                                                <label>Last Name</label>
+                                                <br>
+                                                <input type="text" id="lastName" />
+                                                <div id="lastName-error" class="hidden">Last Name Is Invalid</div>
+                                                <br>
+
+
+                                                <label>Email</label>
+                                                <br>
+                                                <input type="text" id="email" />
+                                                <div id="email-error" class="hidden">Email Is Invalid</div>
+                                                <br>
+
+
+                                                <label>Telephone</label>
+                                                <br>
+                                                <input type="number" id="telephone" />
+                                                <div id="telephone-error" class="hidden">Telephone Is Invalid</div>
+                                                <br>
+                                            </div>
+                                        </div>
+                                    </form>
+
+                                    <div class="modal-footer">
+                                        <h4 class="addselect"> Please Enter Your Details</h4>
+                                        <button id="next" data-dismiss="modal" type="submit" value="next" class="buttonDisplay btn btn-outline-danger" data-toggle="modal"
+                                            data-target="#meals">
+                                            Next
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Meal modal -->
+                        <div class="modal fade" id="meals" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h3 class="modal-title" id="Modal2">Select Your Meals</h3>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <form name="eventsForm" onSubmit="return validateForm(this);" method="post">
+                                        <div class="modal-body">
+                                            <div id="form">
+                                                <input name="event" class="event-radio" type="radio" value="Salad" /> <p class="meal">FreshGreen Salad with Tenara Goats Cheese</p>
+                                                <p class="price"> <i class="fas fa-dollar-sign"></i> 9.5 / Each</p>
+
+                                                <br>
+
+                                                <input name="event" class="event-radio" type="radio" value="Sandwiches" /> <p class="meal">Sandwiches</p>
+
+                                                <p class="price"> <i class="fas fa-dollar-sign"></i> 20 / Each</p>
+                                                <br>
+
+                                                <input name="event" class="event-radio" type="radio" value="Ribs" /> <p class="meal">Pork Ribs</p>
+                                                <p class="price"> <i class="fas fa-dollar-sign"></i> 27 / Each</p>
+                                                <br>
+
+                                                <input name="event" class="event-radio" type="radio" value="Seafood-Platter" /> <p class="meal">Seafood Platter</p>
+                                                <p class="price"> <i class="fas fa-dollar-sign"></i> 38/ Each</p>
+                                                <br>
+
+                                            </div>
+                                        </div>
+                                    </form>
+
+                                    <div class="modal-footer">
+                                        <h4 class="addselect"> Please Select Your Meals</h4>
+                                        <h4 id="finalPrice"></h4>
+                                        <button type="submit" class="buttonDisplay btn btn-warning" id="nextstep" data-dismiss="modal" data-target="#finalPart" data-toggle="modal"> Order Now
+                                            <i class="fas fa-shopping-cart"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    
+
+                    <!-- New Modal -->
+
+                    <div class="modal fade" id="finalPart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <h1>Thanks For Your Order</h1>
+
+                                <div class="modal-footer">
+                                    <button data-dismiss="modal" type="submit"  class="buttonDisplay btn btn-outline-danger" data-toggle="modal">
+                                        Close Now
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                    <!-- End search result -->
+
+
+
+                    <!-- Start Feedback -->
+
+                    <div id="feedback">
+                        <div class="parallax-window" data-parallax="scroll" data-image-src="images/family-room.jpg">
+                            <div class="single-item-rtl container">
+
+                                <div id="slideshow" class="owl-carousel own-theme">
+                                    <div class="item">
+                                        <img src="images/husky(feedback).png" class="center" alt="husky"/>
+                                        <h2>husky</h2>
+                                        <i class="fas fa-quote-left"></i>
+                                        <p>Last night I booked a week at the Bluewater Apartments in Merimbula from Sunday 5th
+                                            August 2018 to Sunday 12th August 2018 for $805 for my Dad and myself and I was
+                                            extremely impressed with how easy it was to book accommodation without any hassles.</p>
+                                        <i class="fas fa-quote-right"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            <!-- End feedback -->
+            <!-- Start About page -->
+
+            <div id="about">
+
+                <div class="container">
+
+                    <h1>About</h1>
+                    <div class="row">
+                        <p class="col-sm-6 col-sm-12">Each day, more than 1,550,000 room nights are reserved on our platform. So whether travelling for
+                            business or leisure, customers can instantly book their ideal accommodation quickly and easily
+                            with Accommodation.com, without booking fees and backed up by our promise to price match. Via
+                            our customer experience team, customers can reach Booking.com 24/7 for assistance, any time of
+                            the day or night.</p>
+                        <img class="col-sm-6 col-sm-12" src="images/hotel-staff.jpg" alt="about"/>
+                    </div>
+                </div>
+            </div>
+            <div class="end"></div>
+
+            <!-- End About -->
+            <!-- Start Contact-->
+            <div id="contact">
+                <div class="parallax-window" data-parallax="scroll" data-image-src="images/beach.png">
+                    <div class="container">
+                        <h1>Leave your Messages</h1>
+                        <form>
+                            <input id="contact-name" class="input-box align-middle" type="text" placeholder="Name">
+                            <input id="contact-email" class="input-box align-middle" type="email" placeholder="Email">
+                            <input id="contact-question" class="input-box align-middle" placeholder="Messages">
+                            <input id="contact-button" class="btn align-middle" type="submit" value="Send">
+                        </form>
+                    </div>
+                </div>
+                <div class="end"></div>
+            </div>
+
+            <!-- End Contact-->
+            <div id="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 col-md-push-9">
+                            <a href="#">
+                                <i class="fab fa-facebook-square social-media"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fab fa-twitter-square social-media"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fab fa-youtube-square social-media"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fab fa-snapchat-square social-media"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fab fa-google-plus-square social-media"></i>
+                            </a>
+                        </div>
+                        <div class="col-md-6"></div>
+                        <div id="copyright" class="col-md-3 col-md-pull-9">
+                            2018
+                            <i class="fas fa-copyright" style="margin: 5px;"></i>Accommodation
+                        </div>
+                    </div>
+                </div>
+                <div class="end"></div>
+            </div>
+
+
+
+            <script src="plugins/aos-master/dist/aos.js"></script>
+            <script src="js/javascript.js"></script>
+            <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+
+</body>
+
+</html>
